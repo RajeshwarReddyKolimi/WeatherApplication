@@ -21,7 +21,6 @@ export default function HistoryData({ currentLocation, setLoading }) {
           values={["Weekly", "Daily"]}
           defaultValue="Weekly"
         />
-        <div className="flex-buffer"></div>
         {selectedChartPeriod == "Daily" && (
           <CustomSelect
             setSelect={setSelectedDate}
