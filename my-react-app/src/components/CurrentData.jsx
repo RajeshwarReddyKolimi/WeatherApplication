@@ -69,12 +69,12 @@ export default function CurrentData({ currentLocation, setLoading }) {
         {currentData?.current?.is_day ? (
           <div className="current-card-day">
             <BsSunFill className="day-icon" />
-            <span>Day</span>
+            <span>Day, {currentData?.current?.condition?.text}</span>
           </div>
         ) : (
           <div className="current-card-day">
             <BsMoonFill className="day-icon" />
-            <span>Night</span>
+            <span>Night, {currentData?.current?.condition?.text}</span>
           </div>
         )}
         <h1>{currentData?.current?.temp_c}&deg; C</h1>
