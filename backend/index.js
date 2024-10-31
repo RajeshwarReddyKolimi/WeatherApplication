@@ -18,7 +18,19 @@ app.use(
     credentials: true,
   })
 );
-
+app.use((req, res, next) => {
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://wavefuel-weather-by-rajeshwar.netlify.app"
+  );
+  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.setHeader("Access-Control-Allow-Methods", "GET,HEAD,OPTIONS,POST,PUT");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  next();
+});
 app.get("/api/current", getCurrent);
 app.get("/api/history", getHistory);
 app.post("/api/data", addData);
