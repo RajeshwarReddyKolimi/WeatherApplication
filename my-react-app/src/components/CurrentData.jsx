@@ -61,8 +61,9 @@ export default function CurrentData({ currentLocation, setLoading }) {
     }
   }
   useEffect(() => {
+    const intervalId = setInterval(getCurrentData, 1000 * 5);
     getCurrentData();
-    setInterval(getCurrentData, 1000 * 5);
+    return () => clearInterval(intervalId);
   }, [currentLocation]);
   return (
     <section className="current-card">
