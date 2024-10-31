@@ -60,7 +60,7 @@ export default function CurrentData({ currentLocation, setLoading }) {
     }
   }
   useEffect(() => {
-    const intervalId = setInterval(getCurrentData, 1000 * 5);
+    const intervalId = setInterval(getCurrentData, 1000 * 60 * 1);
     getCurrentData();
     return () => clearInterval(intervalId);
   }, [currentLocation]);
