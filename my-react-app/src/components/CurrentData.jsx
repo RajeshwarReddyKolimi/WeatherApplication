@@ -52,7 +52,6 @@ export default function CurrentData({ currentLocation, setLoading }) {
 
       if (!response?.ok) return;
       setCurrentData(data);
-      console.log(formatDate(data?.location?.localtime));
       setFormattedDate(formatDate(data?.location?.localtime));
     } catch (e) {
       console.error(e);
