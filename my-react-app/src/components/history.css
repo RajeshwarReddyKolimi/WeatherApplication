@@ -1,0 +1,26 @@
+.history-card {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 80vw;
+  align-items: center;
+}
+.history-card-settings {
+  display: flex;
+  flex-direction: row;
+  /* width: 100%; */
+  /* justify-content: space-between; */
+}
+.history-card-settings > select {
+  /* width: 200px; */
+  padding: 0.5rem;
+}
+
+.history-card > h2 {
+  text-align: center;
+}

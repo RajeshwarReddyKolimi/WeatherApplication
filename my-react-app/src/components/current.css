@@ -1,0 +1,48 @@
+.current-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  box-shadow: 0 0 4px 1px rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.current-card-main-data {
+}
+.current-card-main-data > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.current-card-additional-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* width: 50%; */
+  gap: 3rem;
+  padding: 0.5rem;
+}
+.current-card-additional-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-direction: row;
+}
+.current-card-additional-item > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.current-card-day {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.1rem;
+}
+
+.day-icon {
+  font-size: 1.5rem;
+}

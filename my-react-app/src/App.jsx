@@ -1,15 +1,39 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Dashboard from "./components/Dashboard";
+import CurrentData from "./components/CurrentData";
+import CurrentLocation from "./components/CurrentLocation";
+import HistoryData from "./components/HistoryData";
+import Loader from "./components/Loader";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [currentLocation, setCurrentLocation] = useState({
+    name: "Hyderabad",
+    region: "Andhra Pradesh",
+    country: "India",
+  });
+  const [loading, setLoading] = useState(false);
 
   return (
     <>
-      <Dashboard />
+      <div
+        className="dashboard"
+        style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+      >
+        {loading && <Loader />}
+        <CurrentLocation
+          currentLocation={currentLocation}
+          setCurrentLocation={setCurrentLocation}
+          setLoading={setLoading}
+        />
+        <CurrentData
+          currentLocation={currentLocation}
+          setLoading={setLoading}
+        />
+        <HistoryData
+          currentLocation={currentLocation}
+          setLoading={setLoading}
+        />
+      </div>
     </>
   );
 }

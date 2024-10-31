@@ -3,9 +3,14 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  --text-color: white;
+  --background-color: #0b192c;
+  --style-color-1: #3b82f6;
+  --style-color-2: green;
+
+  color-scheme: light;
+  color: var(--text-color);
+  background-color: var(--background-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,11 +30,14 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  text-align: left;
 }
-
+* {
+  box-sizing: border-box;
+  text-align: left;
+}
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -53,7 +61,36 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+.icon {
+  font-size: 2rem;
+  color: var(--style-color-1);
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--style-color-1);
+}
+
+input,
+select {
+  background-color: rgba(255, 255, 255, 0.01);
+  padding: 0.5rem;
+  color: var(--text-color);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0.2rem;
+}
+select > option {
+  color: black;
+}
+
+.flex-buffer {
+  flex: 1;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
