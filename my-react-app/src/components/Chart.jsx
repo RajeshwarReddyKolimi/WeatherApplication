@@ -49,8 +49,11 @@ export default function Chart({
       setLoading(false);
     }
   }
+
   useEffect(() => {
+    const intervalId = setInterval(getHistory, 1000 * 5);
     getHistory();
+    return () => clearInterval(intervalId);
   }, [availableDates, selectedDate, type]);
   return (
     <div className="chart-container">
