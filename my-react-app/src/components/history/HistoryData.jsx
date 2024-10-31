@@ -35,8 +35,7 @@ export default function HistoryData({ currentLocation, setLoading }) {
         />
       </div>
       <h2>
-        {selectedChartPeriod} {selectedCategory} data of {currentLocation?.name}{" "}
-        in &deg;C
+        {selectedChartPeriod} {selectedCategory} data of {currentLocation?.name}
       </h2>
 
       <Chart
