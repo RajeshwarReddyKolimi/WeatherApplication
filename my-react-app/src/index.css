@@ -93,7 +93,29 @@ select > option {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(220, 220, 220);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--border-color-1);
+}
+
+::-webkit-scrollbar-corner {
+  background: #e0e0e0; /* The bottom corner */
+}
+input:-webkit-autofill {
+  background-color: transparent;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+}
+input[type="checkbox"] {
+  cursor: pointer;
 }
 
 @media (prefers-color-scheme: light) {
