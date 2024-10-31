@@ -51,7 +51,7 @@ export default function Chart({
   }
 
   useEffect(() => {
-    const intervalId = setInterval(getHistory, 1000 * 5);
+    const intervalId = setInterval(getHistory, 1000 * 60 * 1);
     getHistory();
     return () => clearInterval(intervalId);
   }, [availableDates, selectedDate, type]);

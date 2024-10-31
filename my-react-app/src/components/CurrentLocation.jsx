@@ -25,7 +25,6 @@ export default function CurrentLocation({
     }
   }
   function handleChangeLocation(location) {
-    console.log(location);
     setCurrentLocation({
       name: location?.name,
       region: location?.region,
