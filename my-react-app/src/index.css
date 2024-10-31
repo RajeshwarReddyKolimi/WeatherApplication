@@ -96,18 +96,20 @@ select > option {
   width: 0.25rem;
   height: 0.25rem;
 }
-
+::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 ::-webkit-scrollbar-thumb {
   background-color: rgb(220, 220, 220);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--border-color-1);
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 ::-webkit-scrollbar-corner {
-  background: #e0e0e0; /* The bottom corner */
+  background: #e0e0e0;
 }
 input:-webkit-autofill {
   background-color: transparent;
