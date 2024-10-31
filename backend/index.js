@@ -25,7 +25,7 @@ app.post("/api/data", addData);
 app.get("/api/search", searchLocation);
 
 app.use(errorHandler);
-setInterval(autoCommit, 10 * 1000);
+setInterval(autoCommit, 10 * 60 * 1000);
 
 app.listen(PORT || 3000, () => {
   console.log("Listening...");
