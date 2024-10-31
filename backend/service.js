@@ -1,3 +1,5 @@
+const { CustomError } = require("./errorHandler");
+
 async function getCurrent(req, res, next) {
   try {
     const { location } = req.query;
@@ -5,7 +7,8 @@ async function getCurrent(req, res, next) {
       `http://api.weatherapi.com/v1/current.json?key=${process.env.apiKey}&q=${location}&aqi=no`
     );
     const data = await response.json();
-    if (!response?.ok) next(data?.error);
+    if (!response?.ok)
+      throw new CustomError(response?.status, data?.error?.message);
     else res.status(200).send(data);
   } catch (e) {
     next(e);
@@ -19,7 +22,8 @@ async function getHistory(req, res, next) {
       `http://api.weatherapi.com/v1/history.json?key=${process.env.apiKey}&q=${location}&dt=${startDate}&end_dt=${endDate}&aqi=no`
     );
     const data = await response.json();
-    if (!response?.ok) next(data?.error);
+    if (!response?.ok)
+      throw new CustomError(response?.status, data?.error?.message);
     else res.status(200).send(data);
   } catch (e) {
     next(e);
@@ -33,7 +37,8 @@ async function searchLocation(req, res, next) {
       `http://api.weatherapi.com/v1/search.json?key=${process.env.apiKey}&q=${location}&aqi=no`
     );
     const data = await response.json();
-    if (!response?.ok) next(data?.error);
+    if (!response?.ok)
+      throw new CustomError(response?.status, data?.error?.message);
     else res.status(200).send(data);
   } catch (e) {
     next(e);

@@ -3,6 +3,7 @@ import { BsCloudRain, BsMoonFill, BsSunFill } from "react-icons/bs";
 import { FiWind } from "react-icons/fi";
 import { IoSunnyOutline } from "react-icons/io5";
 import { WiHumidity } from "react-icons/wi";
+import { MdOutlineCloud } from "react-icons/md";
 import "./current.css";
 export default function CurrentData({ currentLocation, setLoading }) {
   const [currentData, setCurrentData] = useState();
@@ -82,6 +83,15 @@ export default function CurrentData({ currentLocation, setLoading }) {
         <p>{formattedDate}</p>
       </div>
       <div className="current-card-additional-container">
+        <div className="current-card-additional-item">
+          <MdOutlineCloud className="icon" />
+          <div>
+            <div>Cloud cover</div>
+            <div>
+              <b>{currentData?.current?.cloud}%</b>
+            </div>
+          </div>
+        </div>
         <div className="current-card-additional-item">
           <FiWind className="icon" />
           <div>

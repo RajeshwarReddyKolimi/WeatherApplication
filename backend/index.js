@@ -5,7 +5,7 @@ const {
   addData,
   searchLocation,
 } = require("./service");
-const errorHandler = require("./errorHandler");
+const { errorHandler } = require("./errorHandler");
 const PORT = 3000;
 const cors = require("cors");
 const autoCommit = require("./autocommit");
