@@ -18,11 +18,10 @@
   gap: 1rem;
 }
 .current-card-additional-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  /* width: 50%; */
-  gap: 3rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  gap: 2rem 3rem;
   padding: 0.5rem;
 }
 .current-card-additional-item {

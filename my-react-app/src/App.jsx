@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import CurrentData from "./components/CurrentData";
-import CurrentLocation from "./components/CurrentLocation";
-import HistoryData from "./components/HistoryData";
-import Loader from "./components/Loader";
+import Loader from "./components/utils/Loader";
+import WeatherData from "./components/weather/WeatherData";
+import HistoryData from "./components/history/HistoryData";
+import CurrentLocation from "./components/location/CurrentLocation";
 
 function App() {
   const [currentLocation, setCurrentLocation] = useState({
@@ -25,7 +25,7 @@ function App() {
           setCurrentLocation={setCurrentLocation}
           setLoading={setLoading}
         />
-        <CurrentData
+        <WeatherData
           currentLocation={currentLocation}
           setLoading={setLoading}
         />
