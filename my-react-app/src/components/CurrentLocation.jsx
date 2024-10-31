@@ -12,7 +12,7 @@ export default function CurrentLocation({
     try {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:3000/api/search?location=${location}`
+        `https://weatherapplication-rm3t.onrender.com/api/search?location=${location}`
       );
       const data = await response.json();
 

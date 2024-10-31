@@ -46,7 +46,7 @@ export default function CurrentData({ currentLocation, setLoading }) {
     try {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:3000/api/current?location=${currentLocation?.name}`
+        `https://weatherapplication-rm3t.onrender.com/api/current?location=${currentLocation?.name}`
       );
       const data = await response.json();
 

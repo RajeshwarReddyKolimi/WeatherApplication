@@ -14,7 +14,7 @@ export default function Chart({
     try {
       setLoading(true);
       const response = await fetch(
-        `http://localhost:3000/api/history?location=${currentLocation?.name}&startDate=${availableDates?.[6]}&endDate=${availableDates?.[0]}`
+        `https://weatherapplication-rm3t.onrender.com/api/history?location=${currentLocation?.name}&startDate=${availableDates?.[6]}&endDate=${availableDates?.[0]}`
       );
       const data = await response.json();
       if (!response?.ok) return;
